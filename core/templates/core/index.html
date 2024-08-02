@@ -1,0 +1,34 @@
+<!-- core/templates/core/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body class="login">
+    <div class="login-container">
+        <img src="{% static 'core/images/logo_corfo.png' %}" alt="Logo Corfo" class="logo">
+        <h1>InnovaSensor</h1>
+        <h2>Autenticación de cuenta</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Correo electrónico de usuario:</label>
+                <input type="text" id="username" name="username" placeholder="Ingrese su correo" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+            </div>
+            <div class="button-group">
+                <button type="submit">Acceder</button>
+                <button class="recover-password-button" type="button" onclick="alert('Funcionalidad de recuperación de contraseña próximamente');">Recuperar contraseña</button>
+            </div>
+        </form>
+        <img src="{% static 'core/images/logo_innovachile.png' %}" alt="Logo InnovaChile" class="logo">
+    </div>
+</body>
+</html>

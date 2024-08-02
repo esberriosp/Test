@@ -1,0 +1,128 @@
+/* core/static/core/styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body.login {
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url("/static/core/images/edificio_corfo.png") no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover;
+    position: relative;
+}
+
+body.login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    z-index: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    z-index: 1; /* Colocar el contenedor por encima del fondo opaco */
+}
+
+.login-container h1 {
+    color: #221E7C; /* Color para el título */
+    margin-bottom: 0.5rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem; /* Aumentar el tamaño de la letra */
+}
+
+.login-container h2 {
+    color: #221E7C; /* Color para el subtítulo */
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    font-size: 1.5rem; /* Aumentar el tamaño de la letra */
+    font-family: "DM Sans", sans-serif;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #3F3F3F; /* Color para las etiquetas */
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold; /* Poner en negrita */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.form-group input::placeholder {
+    color: #868686; /* Color para los placeholders */
+    font-family: "DM Sans", sans-serif;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #221E7C; /* Color para el botón */
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 48%;
+    font-family: "DM Sans", sans-serif;
+}
+
+button:hover {
+    background-color: #1106f0; /* Color para el hover del botón */
+}
+
+.recover-password-button {
+    background-color: #800802; /* Color para el botón de recuperar contraseña */
+}
+
+.recover-password-button:hover {
+    background-color: #e60f03; /* Color para el hover del botón de recuperar contraseña */
+}
+
+.login-container p {
+    margin-top: 1rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+.login-container a {
+    color: #007bff; /* Color para los enlaces */
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
